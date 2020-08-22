@@ -1,0 +1,88 @@
+.about
+{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 90vh;
+    align-items: center;
+
+    width: 90%;
+    margin: auto;
+    margin-bottom: 7rem;
+
+
+
+    @include media(900)
+    {
+        width: 95%;
+        margin: 0;
+        margin-bottom: 7rem;
+        margin-left: auto;
+    }
+    @include media(440)
+    {
+        height: 90vh;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 7rem;  
+    }
+
+    &__content
+    {
+        width: 60%;
+    
+        &__heading
+        {
+            @include heading;
+        }
+
+        &__para
+        {
+            opacity: 0;
+            transition: opacity 1500ms ease-in-out 650ms;
+            @include para;
+            max-width: 90ch;
+        }
+
+        @include media(900)
+        {
+            width: 80%;
+        }
+        @include media(440)
+        {
+            width: 100%;   
+        }
+
+    }
+
+    &__banner
+    {
+        width: 40%;
+        height: 100%;
+        background-image: url(/dist/media/man-1x.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: transparent;
+
+        @include media(900)
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80%;
+            background-position: right;
+            background-size: contain;
+            z-index: -10;   
+        }
+
+        @include media(440)
+        {
+            width: 100%;
+            background-position: right;
+            background-size: contain;
+            z-index: -10;   
+        }
+
+    }
+}

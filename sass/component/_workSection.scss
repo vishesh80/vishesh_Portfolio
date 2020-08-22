@@ -1,0 +1,206 @@
+.work
+{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 14rem;
+
+    @include media(600)
+    {
+        margin-bottom: 8rem;
+    }
+
+
+
+    &__heading
+    {
+        @include heading;
+        text-transform: uppercase;
+    }
+
+    &__site
+    {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8rem;
+
+        @include media(800)
+        {
+            flex-direction: column;
+            height: auto;
+            margin-top: 4rem;
+        }
+
+        
+
+        &__images
+        {
+            width: 45%;
+            height: 100%;
+            position: relative;
+
+            @include media(1000)
+            {
+                width: 55%;
+            }
+            @include media(800)
+            {
+                display: block;
+                width: 100%;
+                height: 60vh;
+                order: 2;
+                margin-top: 2.5rem;
+            }
+            @include media(700)
+            {
+                display: block;
+                width: 100%;
+                height: 50vh;
+                order: 2;
+                margin-top: 2.5rem;
+            }
+            @include media(600)
+            {
+                display: block;
+                width: 100%;
+                height: 45vh;
+                order: 2;
+                margin-top: 2.5rem;
+            }
+            @include media(440)
+            {
+                display: block;
+                width: 100%;
+                height: 35vh;
+                order: 2;
+                margin-top: 2.5rem;
+            }
+            @include media(400)
+            {
+                display: block;
+                width: 100%;
+                height: 32vh;
+                order: 2;
+                margin-top: 2.5rem;
+            }
+
+            &:hover &__ver
+            {
+                z-index: 4;
+                transform: scale(1.1);
+            }
+
+            &:hover &__hor
+            {
+                transform: scale(.9) translateY(-50%);
+            }
+
+
+
+            &__ver
+            {
+                position: absolute;
+                z-index: -2;
+                top: 0;
+                left: 0;
+
+                width: 45%;
+                height: 100%;
+                border: solid 5px $color-offWhite;
+
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                transition: all 600ms ease-out;
+
+                @include media(800)
+                {
+                    border: solid 3px $color-offWhite;
+                }
+            }
+
+            &__hor
+            {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 10%;
+
+                width: 90%;
+                height: 65%;
+                transform: translate(0,-50%);
+                border: solid 5px $color-offWhite;
+
+                background-repeat: no-repeat;
+                background-position: top left;
+                background-size: cover;
+                transition: all 600ms ease-out;
+
+                @include media(800)
+                {
+                    border: solid 3px $color-offWhite;
+                }
+            }
+
+            .site1ver{background-image: url(/dist/media/site1ver@2x.png);}
+            .site1hor{background-image: url(/dist/media/site1hor.png);}
+            .site2ver{background-image: url(/dist/media/site2ver@2x.png);}
+            .site2hor{background-image: url(/dist/media/site2hor.png);}
+            .site3ver{background-image: url(/dist/media/site3ver@2x.png);}
+            .site3hor{background-image: url(/dist/media/site3hor.png);}
+        }
+
+
+        &__content
+        {
+            width: 40%;
+
+            @include media(800)
+            {
+                width: 100%;
+                order: 1;
+            }
+
+            &__heading
+            {
+                font-size: 2rem;
+                font-weight: 400;
+                transition: color 200ms ease-in-out;
+
+                &:hover
+                {
+                    animation: pulse 500ms ease-in-out infinite;
+                }
+            }
+
+            &__para
+            {
+                @include para;
+                max-width: 70ch;
+                opacity: 0;
+                transition: opacity 500ms ease-in;
+            }
+        }
+
+    }// Site ends here
+
+
+}
+
+
+// Animations 
+
+@keyframes pulse
+{
+    50%
+    {
+        color: $color-primary;
+    }
+    100%
+    {
+        color:white;
+    }
+}

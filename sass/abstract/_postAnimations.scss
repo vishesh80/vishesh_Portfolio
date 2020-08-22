@@ -1,0 +1,39 @@
+//---------------------About
+
+.fadein
+{
+    opacity: 1 !important;
+}
+
+//---------------------About
+
+.hideVer
+{
+    transform: translateX(-100vw) !important;
+}
+
+.hideHor
+{
+    transform: translate(-100vw,-50%) !important;
+}
+
+//------------------------Tools 
+
+.flip
+{
+    & .cards__card__front
+        {
+            transform: rotate(0);
+        }
+    & .cards__card__back
+    {
+        transform: rotateY(180deg) ;
+    }
+}
+
+//------------------------Nav
+
+.comeinburger
+{
+    animation: comeinnav 1500ms ease-out forwards !important;
+}

@@ -1,0 +1,108 @@
+.contact
+{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 14rem;
+
+    @include media(600)
+    {
+        margin-bottom: 7rem;
+    }
+
+    &__heading
+    {
+        @include heading;
+    }
+
+    &__name
+    {
+        display: block;
+        padding: .2rem 1rem;
+        @include p;
+        font-size: 1rem;
+        color: inherit;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 3px;
+
+        width: 100%;
+
+        &::placeholder
+        {
+            color: $color-offWhite;
+        }
+    }
+
+    &__email
+    {
+        display:block;
+        padding: .2rem 1rem;
+        @include p;
+        font-size: 1rem;
+        color: inherit;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 3px;
+
+        width: 100%;
+
+        &::placeholder
+        {
+            color: $color-offWhite;
+        }
+    }
+
+    &__message
+    {
+        display: block;
+        padding: .5rem 1rem;
+        padding-right: 40%;
+        width: 100%;
+        color: inherit;
+        background-color: $color-primary;
+        border: none;
+        border-radius: 3px;
+
+        @include p;
+        font-size: inherit;
+        font-family: inherit;
+
+        &::placeholder
+        {
+            color: $color-offWhite;
+        }
+    }
+
+    &__button
+    {
+        border: none;
+        border-radius: 3px;
+        display: inline-block;
+        color: white;
+        cursor: pointer;
+        @include p;
+        @supports(-moz-backface-visibility: hidden)
+        {
+            -moz-backface-visibility: hidden;
+        }
+        @supports(-webkit-backface-visibility: hidden)
+        {
+            -webkit-backface-visibility: hidden;
+        }
+        @supports(backface-visibility: hidden)
+        {
+            backface-visibility: hidden;
+        }
+
+        font-size: 1.5rem;
+        padding: .1rem 2.5rem;
+        background-color: $color-primary;
+        transition: all 100ms ease-in;
+
+        &:hover
+        {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 8px 8px 40px black;
+        }
+    }
+}

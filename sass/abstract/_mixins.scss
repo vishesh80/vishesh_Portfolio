@@ -1,0 +1,223 @@
+/*----------------------------------------Gradients ------------------------------------------*/
+
+@mixin redgr {
+   
+    @supports(background-image: -moz-linear-gradient(135deg,#FFEE00,#FF0000))
+    {
+        background-image: -moz-linear-gradient(135deg,#FFEE00,#FF0000);
+    }
+
+    @supports(background-image: -webkit-linear-gradient(135deg,#FFEE00,#FF0000))
+    {
+       background-image: -webkit-linear-gradient(135deg,#FFEE00,#FF0000);
+    }
+
+    @supports(background-image: linear-gradient(135deg,#FFEE00,#FF0000))
+    {
+        background-image: linear-gradient(135deg,#FFEE00,#FF0000) 
+    }
+}
+
+
+@mixin greengr {
+
+    @supports(background-image: -moz-linear-gradient(45deg,#FFE600,#00FF88))
+    {
+        background-image: -moz-linear-gradient(45deg,#FFE600,#00FF88);
+    }
+
+    @supports(background-image: -webkit-linear-gradient(45deg,#FFE600,#00FF88))
+    {
+        background-image: -webkit-linear-gradient(45deg,#FFE600,#00FF88);
+    }
+
+    @supports(background-image: linear-gradient(45deg,#FFE600,#00FF88))
+    {
+        background-image: linear-gradient(45deg,#FFE600,#00FF88);
+    }
+    
+}
+
+
+@mixin purplegr {
+
+    @supports(background-image: -moz-linear-gradient(45deg,#00FFDC,#CB70FF))
+    {
+        background-image: -moz-linear-gradient(45deg,#00FFDC,#CB70FF);
+    }
+
+    @supports(background-image: -webkit-linear-gradient(45deg,#00FFDC,#CB70FF))
+    {
+        background-image: -webkit-linear-gradient(45deg,#00FFDC,#CB70FF);
+    }
+
+    @supports( background-image: linear-gradient(45deg,#00FFDC,#CB70FF))
+    {
+         background-image: linear-gradient(45deg,#00FFDC,#CB70FF);
+    }
+
+}
+
+@mixin bluegr {
+
+    @supports(background-image: -moz-linear-gradient(135deg,$color-primary,$color-offWhite))
+    {
+        background-image: -moz-linear-gradient(135deg,$color-primary,$color-offWhite);
+    }
+
+    @supports(background-image: -webkit-linear-gradient(135deg,$color-primary,$color-offWhite))
+    {
+        background-image: -webkit-linear-gradient(135deg,$color-primary,$color-offWhite);
+    }
+
+    @supports( background-image: linear-gradient(135deg,$color-primary,$color-offWhite))
+    {
+         background-image: linear-gradient(135deg,$color-primary,$color-offWhite);
+    }
+
+}
+
+@mixin bluergr{
+
+    @supports(background-image: -moz-radial-gradient($color-primary,white))
+    {
+        background-image: -moz-radial-gradient($color-primary,white);
+    }
+
+    @supports(background-image: -webkit-radial-gradient($color-primary,white))
+    {
+        background-image: -webkit-radial-gradient($color-primary,white);
+    }
+
+    @supports( background-image: radial-gradient($color-primary,white))
+    {
+         background-image: radial-gradient($color-primary,white);
+    }
+
+}
+
+@mixin namegr($color) {
+
+    @supports(background-image: -moz-linear-gradient(225deg,$color-primary, $color))
+    {
+        background-image: -moz-linear-gradient(225deg,$color-primary, $color);
+    }
+
+    @supports(background-image: -webkit-linear-gradient(225deg,$color-primary, $color))
+    {
+        background-image: -webkit-linear-gradient(225deg,$color-primary, $color);
+    }
+
+    @supports( background-image: linear-gradient(225deg,$color-primary, $color))
+    {
+         background-image: linear-gradient(225deg,$color-primary, $color);
+    }
+
+}
+
+
+/*-----------------------Typography------------------------*/
+
+@mixin heading 
+{
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+
+        @include media(800)
+        {
+            font-size: 3.5rem;
+        }
+}
+
+@mixin p 
+{
+            font-size: .9rem;
+            line-height: 2;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+}
+
+
+@mixin para 
+{
+            font-size: .9rem;
+            line-height: 2;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+            margin-top: 2rem;
+}
+
+
+/*--------------------Back images ------------------*/
+
+@mixin backimage 
+{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 80%;
+        height: 80%;
+}
+
+/*--------------------Media queries-----------------------*/
+
+@mixin media($width) {
+
+
+
+    @if $width == 1250
+    {
+        @media (max-width: 1250px){@content;}
+    }
+
+    @if $width == 1000
+    {
+        @media (max-width: 1200px){@content;}
+    }
+
+    @if $width == 900
+    {
+        @media (max-width: 900px){@content;}
+    }
+    @if $width == 700
+    {
+        @media (max-width: 700px){@content;}
+    }
+    @if $width == 800
+    {
+        @media (max-width: 800px){@content;}
+    }
+
+    @if $width == 600
+    {
+        @media (max-width: 600px){@content;}
+    }
+
+     @if $width == 440
+    {
+        @media (max-width: 440px){@content;}
+    }
+
+    @if $width == 400
+    {
+        @media (max-width: 400px){@content;}
+    }
+
+   
+    
+
+    
+
+    @if $width == 1500
+    {
+        @media (min-width: 1500px){@content;}
+    }
+    @if $width == 1800
+    {
+        @media (min-width: 1800px){@content;}
+    }
+
+}

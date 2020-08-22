@@ -1,0 +1,198 @@
+.tools
+{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 14rem;
+
+    @include media(600)
+    {
+        margin-bottom: 7rem;
+    }
+    &__heading
+    {
+        @include heading;
+    }
+}
+
+
+.cards
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 4rem;
+
+
+    @include media(1000)
+    {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0rem;
+    }
+    @include media(600)
+    {
+        margin-top: 0rem;
+    }
+
+    
+
+    &__card
+    {
+        width: 26vw;
+        height: 26vw;
+        position: relative;
+        @supports(-moz-perspective: 800px)
+        {
+            -moz-perspective: 800px;
+        }
+        @supports(-webkit-perspective: 800px)
+        {
+            -webkit-perspective: 800px;
+        }
+        @supports(perspective: 800px)
+        {
+            perspective: 800px;
+        }
+        
+        @include media(1000)
+        {
+            width: 75vw;
+            height: 75vw;
+            margin-top: 4rem;
+        }
+        @include media(600)
+        {
+            width: 90vw;
+            height: 90vw;
+            margin-top: 4rem;
+        }
+
+
+        &__front
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include bluegr;
+
+            width: 100%;
+            height: 100%;
+            padding: 1.5rem;
+
+            transform: rotateY(-180deg);
+
+            .service
+            {
+                text-transform: uppercase;
+                font-weight: 300;
+                line-height: 1.4;
+                letter-spacing: 1px;
+                font-size: 2.4rem;
+
+                text-align: center;
+                margin-top: 50%;
+                transform: translateY(-50%);
+
+                @include media(1000)
+                {
+                    font-size: 2.8rem;
+                }
+                @include media(600)
+                {
+                    font-size: 2.2rem;
+                }
+            }
+
+            @supports(-moz-backface-visibility: hidden)
+            {
+                -moz-backface-visibility: hidden;
+            }
+            @supports(-webkit-backface-visibility: hidden)
+            {
+                -webkit-backface-visibility: hidden;
+            }
+            @supports(backface-visibility: hidden)
+            {
+                backface-visibility: hidden;
+            }
+
+            transition: transform 500ms ease-out;
+        } // Front ends
+
+
+
+        &__back
+        {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background: orangered;
+
+
+            @supports(-moz-backface-visibility: hidden)
+            {
+                -moz-backface-visibility: hidden;
+            }
+            @supports(-webkit-backface-visibility: hidden)
+            {
+                -webkit-backface-visibility: hidden;
+            }
+            @supports(backface-visibility: hidden)
+            {
+                backface-visibility: hidden;
+            }
+
+            transition: transform 500ms ease-out;
+        }// back ends
+        
+
+
+
+
+        .back1
+        {
+            @include redgr;
+
+            .fullstack{@include backimage;}
+
+        }//back1 ends
+
+        .back2
+        {
+            @include greengr;
+
+            .frontend{@include backimage;left: 47%;}
+            
+        }//back2 ends
+
+        .back3
+        {
+            @include purplegr;
+
+            .backend{@include backimage;}
+        }//back3 ends
+
+
+
+        // card animation inside card
+        &:hover &__front
+        {
+            transform: rotateY(-180deg);
+        }
+        &:hover &__back
+        {
+            transform: rotate(0);
+        }
+
+
+
+    }//card ends
+
+
+}//cards ends
+
+

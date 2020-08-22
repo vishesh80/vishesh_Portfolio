@@ -1,0 +1,69 @@
+*,
+*::after,
+*::before
+{
+    outline: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import'./abstract/variabes','./abstract/utility','./abstract/mixins';
+
+html
+{
+    @include media(1800)
+    {
+        font-size: 18px;
+    }
+}
+
+body
+{
+    background: $color-darker;
+    color: white;
+    background-repeat: no-repeat;
+    font-family: 'Roboto',Arial, sans-serif;
+}
+
+.dash
+{
+    font-size: inherit;
+    color: $color-primary;
+    margin-left: .1em;
+
+    animation: infpulse 800ms linear infinite;
+}
+@keyframes infpulse
+{
+    0%{opacity: 1;}
+    55%{opacity: 1;}
+    60%{opacity: 0;}
+    100%{opacity: 0;}
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+::selection
+{
+    color: white;
+    background-color: $color-primary;
+}
+
+.radio
+{
+    display: none;
+}
+
+@import './component/header','./component/nav','./component/aboutSection','./component/workSection',
+        './component/toolsSection','./component/contact','./component/footer','./abstract/postAnimations';
+
+
+
+
+
+

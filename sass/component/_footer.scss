@@ -1,0 +1,98 @@
+.footer
+{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 2rem 5%;
+
+    background-color: $color-dark;
+    box-shadow: 0 0 60px black;
+
+    @include media(600)
+    {
+        justify-content: space-around;
+    }
+
+
+    &__font
+    {
+        @include p;
+    }
+
+    &__text
+    {
+       position: relative;
+       padding-right: 1rem;
+    }
+
+    &__logo
+    {
+        position: absolute;
+        bottom: 4%;
+        left: 0;
+        display: block;
+        width: 4rem;
+    }
+
+
+    &__nav
+    {
+        margin-left: 3rem;
+
+        @include media(600)
+        {
+             margin: 0;
+             padding-right: .5rem;
+        }
+
+        &__a
+        {
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: all 150ms ease-in-out;
+
+            &:hover
+            {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__links
+    {
+        margin-left: auto;
+        align-self: center;
+        align-self: stretch;
+
+        @include media(600)
+        {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        &__link
+        {
+            width: 1.8rem;
+            margin-left: 1.5rem;
+            display: inline-block;
+            transition: all 200ms ease-in-out;
+
+            img
+            {
+                display: inline-block;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            &:hover
+            {
+                transform: translateY(-5px) scale(1.3);
+            }
+
+        }
+    }
+
+}
