@@ -494,7 +494,7 @@ a {
 .about__banner {
   width: 40%;
   height: 100%;
-  background-image: url(/dist/media/man-1x.png);
+  background-image: url(../media/man-1x.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -678,27 +678,27 @@ a {
 }
 
 .work__site__images .site1ver {
-  background-image: url(/dist/media/site1ver@2x.png);
+  background-image: url(../media/site1ver@2x.png);
 }
 
 .work__site__images .site1hor {
-  background-image: url(/dist/media/site1hor.png);
+  background-image: url(../media/site1hor.png);
 }
 
 .work__site__images .site2ver {
-  background-image: url(/dist/media/site2ver@2x.png);
+  background-image: url(../media/site2ver@2x.png);
 }
 
 .work__site__images .site2hor {
-  background-image: url(/dist/media/site2hor.png);
+  background-image: url(../media/site2hor.png);
 }
 
 .work__site__images .site3ver {
-  background-image: url(/dist/media/site3ver@2x.png);
+  background-image: url(../media/site3ver@2x.png);
 }
 
 .work__site__images .site3hor {
-  background-image: url(/dist/media/site3hor.png);
+  background-image: url(../media/site3hor.png);
 }
 
 .work__site__content {
