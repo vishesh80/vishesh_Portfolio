@@ -26,6 +26,24 @@ body
     font-family: 'Roboto',Arial, sans-serif;
 }
 
+.loading
+{
+    position: fixed;
+    z-index: 300;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img
+    {
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
 .dash
 {
     font-size: inherit;

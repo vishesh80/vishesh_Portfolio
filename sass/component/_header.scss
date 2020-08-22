@@ -18,7 +18,7 @@
 
         width: 5rem;
         opacity: 0;
-        animation: comeinlogo 1000ms ease-out 3500ms forwards;
+        //animation: comeinlogo 1000ms ease-out 3500ms forwards;
 
         @include media(900)
         {
@@ -40,7 +40,7 @@
             letter-spacing: 3px;
 
             opacity: 0;
-            animation: comein 2000ms ease-in forwards 950ms;
+            //animation: comein 2000ms ease-in forwards 950ms;
             
             @supports(-webkit-background-clip: text)
             {
@@ -128,7 +128,7 @@
         object-fit: cover;
         object-position: bottom;
 
-        animation: comein 2300ms ease-in forwards 2300ms;
+        //animation: comein 2300ms ease-in forwards 2300ms;
     }
 }
 
@@ -138,12 +138,12 @@
 .sub1
 {
     opacity: 0;
-    animation: comein 2000ms ease-in-out forwards 70ms;
+    //animation: comein 2000ms ease-in-out forwards 70ms;
 }
 .sub2
 {
     opacity: 0;
-    animation: comein 2000ms ease-in-out forwards 1950ms;
+    //animation: comein 2000ms ease-in-out forwards 1950ms;
 }
 
 @keyframes comein

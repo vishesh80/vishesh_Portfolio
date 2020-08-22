@@ -40,6 +40,22 @@ body {
   font-family: 'Roboto',Arial, sans-serif;
 }
 
+.loading {
+  position: fixed;
+  z-index: 300;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading img {
+  width: 100%;
+  max-width: 600px;
+}
+
 .dash {
   font-size: inherit;
   color: #4BC8CF;
@@ -94,7 +110,6 @@ a {
   right: 6%;
   width: 5rem;
   opacity: 0;
-  animation: comeinlogo 1000ms ease-out 3500ms forwards;
 }
 
 @media (max-width: 900px) {
@@ -115,7 +130,6 @@ a {
   text-transform: uppercase;
   letter-spacing: 3px;
   opacity: 0;
-  animation: comein 2000ms ease-in forwards 950ms;
 }
 
 @supports (-webkit-background-clip: text) {
@@ -249,18 +263,15 @@ a {
   z-index: -10;
   object-fit: cover;
   object-position: bottom;
-  animation: comein 2300ms ease-in forwards 2300ms;
 }
 
 /*---------------  Animations ----------------*/
 .sub1 {
   opacity: 0;
-  animation: comein 2000ms ease-in-out forwards 70ms;
 }
 
 .sub2 {
   opacity: 0;
-  animation: comein 2000ms ease-in-out forwards 1950ms;
 }
 
 @keyframes comein {
@@ -1228,6 +1239,26 @@ a {
 
 .footer__links__link:hover {
   transform: translateY(-5px) scale(1.3);
+}
+
+.videoani {
+  animation: comein 2300ms ease-in forwards 2300ms !important;
+}
+
+.logoani {
+  animation: comeinlogo 1000ms ease-out 3500ms forwards !important;
+}
+
+.sub1ani {
+  animation: comein 2000ms ease-in-out forwards 70ms !important;
+}
+
+.nameani {
+  animation: comein 2000ms ease-in forwards 950ms !important;
+}
+
+.sub2ani {
+  animation: comein 2000ms ease-in-out forwards 1950ms !important;
 }
 
 .fadein {

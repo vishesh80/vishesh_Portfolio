@@ -9,11 +9,14 @@
 </head>
 <body>
 
+    <div class="loading" id="loading">
+        <img src="./media/loading.gif" alt="Loading">
+    </div>
     
     <!-- -------------------- Header -------------------------- -->
     <header class="header" id="home">
 
-        <video class="header__bg" autoplay muted loop>
+        <video id="video" class="header__bg" autoplay muted loop>
             <source src="./media/video.mp4" type="video/mp4">
         </video>
 
@@ -32,12 +35,12 @@
         
 
         <div class="header__content">
-            <h2 class="header__content__sub sub1">Hi, my name is</h2>
-            <h1 class="header__content__name">Vishesh</h1>
-            <h2 class="header__content__sub sub2">And i am a Full Stack Developer</h2>
+            <h2 id="sub1" class="header__content__sub sub1">Hi, my name is</h2>
+            <h1 id="name" class="header__content__name">Vishesh</h1>
+            <h2 id="sub2" class="header__content__sub sub2">And i am a Full Stack Developer</h2>
         </div>
 
-        <object class="header__logo" data="/dist/logos/VT.svg" type="image/svg+xml"></object>
+        <object id="logo" class="header__logo" data="/dist/logos/VT.svg" type="image/svg+xml"></object>
     </header>
 
 
@@ -138,17 +141,17 @@
 
                 <div class="cards__card" id="card1">
                     <div class="cards__card__front"><h3 class="service">Full stack development</h3></div>
-                    <div class="cards__card__back back1"><img class="fullstack" src="/dist/media/fullstack.png" alt=""></div>
+                    <div class="cards__card__back back1"><img class="fullstack" src="./media/fullstack.png" alt=""></div>
                 </div>
 
                 <div class="cards__card" id="card2">
                     <div class="cards__card__front"><h3 class="service">Front end development</h3></div>
-                    <div class="cards__card__back back2"><img class="frontend" src="/dist/media/frontend.png" alt=""></div>
+                    <div class="cards__card__back back2"><img class="frontend" src="./media/frontend.png" alt=""></div>
                 </div>
 
                 <div class="cards__card" id="card3">
                     <div class="cards__card__front"><h3 class="service">Back end development</h3></div>
-                    <div class="cards__card__back back3"><img class="backend" src="/dist/media/backend.png" alt=""></div>
+                    <div class="cards__card__back back3"><img class="backend" src="./media/backend.png" alt=""></div>
                 </div>
             </div>
 

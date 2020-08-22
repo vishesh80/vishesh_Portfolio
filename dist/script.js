@@ -46,6 +46,23 @@ let contactFlag = true;
 
 let radio = document.getElementById('radio');
 let burger = document.getElementById('burger');
+let loading = document.getElementById('loading');
+
+let video = document.getElementById('video');
+let logo = document.getElementById('logo');
+let sub1 = document.getElementById('sub1');
+let sub2 = document.getElementById('sub2');
+let name = document.getElementById('name');
+
+
+// Locking scroll when loading
+function noScroll() {
+    window.scrollTo(0, 0);
+}
+// add listener to disable scroll
+window.addEventListener('scroll', noScroll);
+
+
 
 
 /*---------------- Typers,fadeins ,movins------------------- */
@@ -212,6 +229,20 @@ async function contactTyper() {
 
 
 /*-------------- Scroll listener------------------- */
+
+window.addEventListener('load',e => {
+
+    loading.style.display = 'none';
+
+    video.classList.add('videoani');
+    logo.classList.add('logoani');
+    sub1.classList.add('sub1ani');
+    name.classList.add('nameani');
+    sub2.classList.add('sub2ani');
+
+    // Remove listener to re-enable scroll
+    window.removeEventListener('scroll', noScroll);
+});
 
 setTimeout(() => window.addEventListener("scroll", (e) => {
 
