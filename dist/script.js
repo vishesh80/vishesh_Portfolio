@@ -234,6 +234,7 @@ window.addEventListener('load',e => {
 
     loading.style.display = 'none';
 
+    video.play();
     video.classList.add('videoani');
     logo.classList.add('logoani');
     sub1.classList.add('sub1ani');
