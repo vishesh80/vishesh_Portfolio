@@ -17,7 +17,7 @@
     <!-- -------------------- Header -------------------------- -->
     <header class="header" id="home">
 
-        <video id="video" class="header__bg" muted playsinline autoplay loop >
+        <video onloadeddata="this.play();" poster="./media/poster.png" id="video" class="header__bg" muted playsinline loop autoplay>
             <source src="./media/video.mp4" type="video/mp4">
             <h3>Background Video is not supported in you browser. Switch to stable browsers like Chrome, opera etc.</h3>
         </video>

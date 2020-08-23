@@ -43,24 +43,24 @@
             opacity: 0;
             //animation: comein 2000ms ease-in forwards 950ms;
             
-            @supports(-webkit-background-clip: text)
-            {
-                -webkit-background-clip: text;
-                @include namegr(rgb(255, 255, 255));
-                color: transparent;
-            }
-            @supports(-moz-background-clip: text)
-            {
-                -moz-background-clip: text;
-                @include namegr(rgb(255, 255, 255));
-                color: transparent;
-            }
-            @supports(background-clip: text)
-            {
-                background-clip: text;
-                @include namegr(rgb(255, 255, 255));
-                color: transparent;
-            }
+            // @supports(-webkit-background-clip: text)
+            // {
+            //     -webkit-background-clip: text;
+            //     @include namegr(rgb(255, 255, 255));
+            //     color: transparent;
+            // }
+            // @supports(-moz-background-clip: text)
+            // {
+            //     -moz-background-clip: text;
+            //     @include namegr(rgb(255, 255, 255));
+            //     color: transparent;
+            // }
+            // @supports(background-clip: text)
+            // {
+            //     background-clip: text;
+            //     @include namegr(rgb(255, 255, 255));
+            //     color: transparent;
+            // }
             
             
             @include media(440)
