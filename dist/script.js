@@ -42,6 +42,7 @@ let card2Flag = true;
 let card3Flag = true;
 
 let contactFlag = true;
+let lock = true;
 
 
 let radio = document.getElementById('radio');
@@ -232,17 +233,39 @@ async function contactTyper() {
 
 window.addEventListener('load',e => {
 
-    loading.style.display = 'none';
+    if(lock)
+    {
+        lock = false;
 
-    video.classList.add('videoani');
-    logo.classList.add('logoani');
-    sub1.classList.add('sub1ani');
-    name.classList.add('nameani');
-    sub2.classList.add('sub2ani');
-
-    // Remove listener to re-enable scroll
-    window.removeEventListener('scroll', noScroll);
+        loading.style.display = 'none';
+        video.classList.add('videoani');
+        logo.classList.add('logoani');
+        sub1.classList.add('sub1ani');
+        name.classList.add('nameani');
+        sub2.classList.add('sub2ani');
+        // Remove listener to re-enable scroll
+        window.removeEventListener('scroll', noScroll);
+    }
 });
+setTimeout(() => {
+
+    if (lock) {
+        lock = false;
+
+        loading.style.display = 'none';
+        video.classList.add('videoani');
+        logo.classList.add('logoani');
+        sub1.classList.add('sub1ani');
+        name.classList.add('nameani');
+        sub2.classList.add('sub2ani');
+        // Remove listener to re-enable scroll
+        window.removeEventListener('scroll', noScroll);
+    }
+},12000);
+
+
+
+
 
 setTimeout(() => window.addEventListener("scroll", (e) => {
 
