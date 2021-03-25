@@ -2,7 +2,26 @@ const about = document.getElementById("about");
 const aboutPara1 = document.getElementById("aboutPara1");
 const aboutPara2 = document.getElementById("aboutPara2");
 
+const exp0h = document.getElementById("exp0h");
+const exp0s1 = document.getElementById('exp0s1');
+const exp0s2 = document.getElementById('exp0s2');
+const exp0__banner = document.getElementById('exp0__banner');
+
 const work = document.getElementById("work");
+
+const siteNeg1Name = document.getElementById('site-1Name');
+const siteNeg1Ver = document.getElementsByClassName('site-1ver')[0];
+const siteNeg1Hor = document.getElementsByClassName('site-1hor')[0];
+const siteNeg1Para = document.getElementsByClassName('site-1Para');
+const siteNeg2Name = document.getElementById('site-2Name');
+const siteNeg2Ver = document.getElementsByClassName('site-2ver')[0];
+const siteNeg2Hor = document.getElementsByClassName('site-2hor')[0];
+const siteNeg2Para = document.getElementsByClassName('site-2Para');
+const site0Name = document.getElementById('site0Name');
+const site0Ver = document.getElementsByClassName('site0ver')[0];
+const site0Hor = document.getElementsByClassName('site0hor')[0];
+const site0Para = document.getElementsByClassName('site0Para');
+
 const site1Name = document.getElementById('site1Name');
 const site1Ver = document.getElementsByClassName('site1ver')[0];
 const site1Hor = document.getElementsByClassName('site1hor')[0];
@@ -28,7 +47,15 @@ const contact = document.getElementById('contact');
 let aboutFlag = true;
 let aboutPara1Flag = true;
 
+let expFlag0 = true;
+
 let workFlag = true;
+let siteNeg1NameFlag = true;
+let siteNeg1ImgsFlag = true;
+let siteNeg2NameFlag = true;
+let siteNeg2ImgsFlag = true;
+let site0NameFlag = true;
+let site0ImgsFlag = true;
 let site1NameFlag = true;
 let site1ImgsFlag = true;
 let site2NameFlag = true;
@@ -70,20 +97,20 @@ window.addEventListener('scroll', noScroll);
 
 
 async function aboutTyper() {
-  let data = "ABOUT".split("");
+    let data = "ABOUT".split("");
 
-  for (let d of data) {
-    about.textContent = about.textContent + d;
-    await new Promise((resolve, reject) => setTimeout(() => resolve(), 130));
-  }
+    for (let d of data) {
+        about.textContent = about.textContent + d;
+        await new Promise((resolve, reject) => setTimeout(() => resolve(), 130));
+    }
 }
 
 
 
 async function aboutPara1Fadein() {
 
-  aboutPara1.classList.add("fadein");
-  setTimeout(() => aboutPara2.classList.add("fadein"), 700);
+    aboutPara1.classList.add("fadein");
+    setTimeout(() => aboutPara2.classList.add("fadein"), 700);
 }
 
 
@@ -92,9 +119,9 @@ async function aboutPara1Fadein() {
 
 
 
-async function workTyper(){
+async function workTyper() {
 
-    let data = "WORK".split("");
+    let data = "PROJECTS".split("");
 
     for (let d of data) {
         work.textContent = work.textContent + d;
@@ -104,13 +131,29 @@ async function workTyper(){
 
 
 
-async function moveinImages(site)
-{
-    switch(site)
-    {
-        case 1 : {
+async function moveinImages(site) {
+    switch (site) {
+        case -2: {
+            siteNeg2Ver.classList.remove('hideVer');
+            setTimeout(() => siteNeg2Hor.classList.remove('hideHor'), 500);
+            break;
+        }
+
+        case -1: {
+            siteNeg1Ver.classList.remove('hideVer');
+            setTimeout(() => siteNeg1Hor.classList.remove('hideHor'), 500);
+            break;
+        }
+
+        case 0: {
+            site0Ver.classList.remove('hideVer');
+            setTimeout(() => site0Hor.classList.remove('hideHor'), 500);
+            break;
+        }
+
+        case 1: {
             site1Ver.classList.remove('hideVer');
-            setTimeout(() => site1Hor.classList.remove('hideHor'),500);
+            setTimeout(() => site1Hor.classList.remove('hideHor'), 500);
             break;
         }
 
@@ -131,6 +174,49 @@ async function moveinImages(site)
 
 async function siteNameTyper(site) {
     switch (site) {
+
+        case -2: {
+
+            let data = "Brickview Studios".split("");
+
+            for (let d of data) {
+                siteNeg2Name.textContent = siteNeg2Name.textContent + d;
+                await new Promise((resolve, reject) => setTimeout(() => resolve(), 50));
+            }
+
+            siteNeg2Para[0].classList.add('fadein');
+            setTimeout(() => siteNeg2Para[1].classList.add('fadein'), 500);
+            break;
+        }
+
+        case -1: {
+
+            let data = "Sarvogyan".split("");
+
+            for (let d of data) {
+                siteNeg1Name.textContent = siteNeg1Name.textContent + d;
+                await new Promise((resolve, reject) => setTimeout(() => resolve(), 50));
+            }
+
+            siteNeg1Para[0].classList.add('fadein');
+            setTimeout(() => siteNeg1Para[1].classList.add('fadein'), 500);
+            break;
+        }
+
+        case 0: {
+
+            let data = "EDUBRITE".split("");
+
+            for (let d of data) {
+                site0Name.textContent = site0Name.textContent + d;
+                await new Promise((resolve, reject) => setTimeout(() => resolve(), 50));
+            }
+
+            site0Para[0].classList.add('fadein');
+            setTimeout(() => site0Para[1].classList.add('fadein'), 500);
+            break;
+        }
+
         case 1: {
 
             let data = "VIS Blog".split("");
@@ -177,7 +263,44 @@ async function siteNameTyper(site) {
 
 
 
+async function expAni(exp) {
 
+    let dash = document.createElement('span');
+    dash.textContent = "_";
+    dash.classList.add('dash');
+
+    let exp0h_tc = "Full Stack Engineer".split("");
+    let exp0s1_tc = "Brickview Studios • Internship".split("");
+    let exp0s2_tc = "Sept 2020 - Feb 2021 • 6 months".split("");
+
+    switch (exp) {
+
+        case 0: {
+            exp0__banner.classList.add('fadein');
+            exp0h.parentElement.append(dash);
+            for (let d of exp0h_tc) {
+                exp0h.textContent = exp0h.textContent + d;
+                await new Promise((resolve, reject) => setTimeout(() => resolve(), 35));
+            }
+            exp0h.parentElement.removeChild(dash);
+
+            exp0s1.parentElement.append(dash);
+            for (let d of exp0s1_tc) {
+                exp0s1.textContent = exp0s1.textContent + d;
+                await new Promise((resolve, reject) => setTimeout(() => resolve(), 35));
+            }
+            exp0s1.parentElement.removeChild(dash);
+
+            exp0s2.parentElement.append(dash);
+            for (let d of exp0s2_tc) {
+                exp0s2.textContent = exp0s2.textContent + d;
+                await new Promise((resolve, reject) => setTimeout(() => resolve(), 35));
+            }
+
+        }
+
+    }
+}
 
 
 
@@ -231,10 +354,9 @@ async function contactTyper() {
 
 /*-------------- Scroll listener------------------- */
 
-window.addEventListener('load',e => {
+window.addEventListener('load', e => {
 
-    if(lock)
-    {
+    if (lock) {
         lock = false;
 
         loading.style.display = 'none';
@@ -261,7 +383,7 @@ setTimeout(() => {
         // Remove listener to re-enable scroll
         window.removeEventListener('scroll', noScroll);
     }
-},12000);
+}, 12000);
 
 
 
@@ -282,8 +404,12 @@ setTimeout(() => window.addEventListener("scroll", (e) => {
         aboutPara1Fadein();
     }
 
-
-
+    // Exp section checks
+    let rect2_1 = exp0__banner.getBoundingClientRect();
+    if (innerHeight - innerHeight * 0.45 > rect2_1.top && expFlag0) {
+        expFlag0 = false;
+        expAni(0);
+    }
 
 
     // Work section checks
@@ -292,6 +418,43 @@ setTimeout(() => window.addEventListener("scroll", (e) => {
         workFlag = false;
         workTyper();
     }
+
+    let rect3_1 = siteNeg2Ver.getBoundingClientRect();
+    if (innerHeight - innerHeight * 0.4 > rect3_1.top && siteNeg2ImgsFlag) {
+        siteNeg2ImgsFlag = false;
+        moveinImages(-2);
+    }
+
+    let rect3_2 = siteNeg1Ver.getBoundingClientRect();
+    if (innerHeight - innerHeight * 0.4 > rect3_2.top && siteNeg1ImgsFlag) {
+        siteNeg1ImgsFlag = false;
+        moveinImages(-1);
+    }
+
+    let rect3_3 = site0Ver.getBoundingClientRect();
+    if (innerHeight - innerHeight * 0.4 > rect3_3.top && site0ImgsFlag) {
+        site0ImgsFlag = false;
+        moveinImages(0);
+    }
+
+    let rect3_4 = siteNeg2Name.getBoundingClientRect();
+    if (innerHeight - innerHeight * 0.4 > rect3_4.top && siteNeg2NameFlag) {
+        siteNeg2NameFlag = false;
+        siteNameTyper(-2);
+    }
+
+    let rect3_5 = siteNeg1Name.getBoundingClientRect();
+    if (innerHeight - innerHeight * 0.4 > rect3_5.top && siteNeg1NameFlag) {
+        siteNeg1NameFlag = false;
+        siteNameTyper(-1);
+    }
+
+    let rect3_6 = site0Name.getBoundingClientRect();
+    if (innerHeight - innerHeight * 0.4 > rect3_6.top && site0NameFlag) {
+        site0NameFlag = false;
+        siteNameTyper(0);
+    }
+
 
     let rect4 = site1Ver.getBoundingClientRect();
     if (innerHeight - innerHeight * 0.4 > rect4.top && site1ImgsFlag) {
@@ -363,10 +526,10 @@ setTimeout(() => window.addEventListener("scroll", (e) => {
     }
 
 }),
-1100);
+    1100);
 
 //------- Burger fix
 
-document.getElementById('burgerLinks').addEventListener('click',e => {
+document.getElementById('burgerLinks').addEventListener('click', e => {
     radio.checked = false;
 });

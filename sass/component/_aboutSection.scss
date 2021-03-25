@@ -8,7 +8,7 @@
 
     width: 90%;
     margin: auto;
-    margin-bottom: 7rem;
+    margin-bottom: 0rem; // 7
 
 
 
@@ -16,7 +16,7 @@
     {
         width: 95%;
         margin: 0;
-        margin-bottom: 7rem;
+        margin-bottom: 0rem;
         margin-left: auto;
     }
     @include media(440)
@@ -24,7 +24,7 @@
         height: 90vh;
         width: 90%;
         margin: auto;
-        margin-bottom: 7rem;  
+        margin-bottom: 0rem;  
     }
 
     &__content

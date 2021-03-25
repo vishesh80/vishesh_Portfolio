@@ -383,14 +383,14 @@ a {
   align-items: center;
   width: 90%;
   margin: auto;
-  margin-bottom: 7rem;
+  margin-bottom: 0rem;
 }
 
 @media (max-width: 900px) {
   .about {
     width: 95%;
     margin: 0;
-    margin-bottom: 7rem;
+    margin-bottom: 0rem;
     margin-left: auto;
   }
 }
@@ -400,7 +400,7 @@ a {
     height: 90vh;
     width: 90%;
     margin: auto;
-    margin-bottom: 7rem;
+    margin-bottom: 0rem;
   }
 }
 
@@ -596,8 +596,9 @@ a {
   width: 45%;
   height: 100%;
   border: solid 5px #EBEBEB;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.631);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   transition: all 600ms ease-out;
 }
@@ -617,6 +618,7 @@ a {
   height: 65%;
   transform: translate(0, -50%);
   border: solid 5px #EBEBEB;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.631);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -627,6 +629,30 @@ a {
   .work__site__images__hor {
     border: solid 3px #EBEBEB;
   }
+}
+
+.work__site__images .site-2ver {
+  background-image: url(../media/site-2ver.png);
+}
+
+.work__site__images .site-2hor {
+  background-image: url(../media/site-2hor.png);
+}
+
+.work__site__images .site-1ver {
+  background-image: url(../media/site-1ver.png);
+}
+
+.work__site__images .site-1hor {
+  background-image: url(../media/site-1hor.png);
+}
+
+.work__site__images .site0ver {
+  background-image: url(../media/site0ver.png);
+}
+
+.work__site__images .site0hor {
+  background-image: url(../media/site0hor.png);
 }
 
 .work__site__images .site1ver {
@@ -683,6 +709,67 @@ a {
   max-width: 70ch;
   opacity: 0;
   transition: opacity 500ms ease-in;
+}
+
+.exp {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 12rem;
+}
+
+@media (max-width: 600px) {
+  .exp {
+    margin-bottom: 8rem;
+  }
+}
+
+.exp__banner {
+  width: 175px;
+  height: 175px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: transparent;
+}
+
+.exp__content__heading {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+  .exp__content__heading {
+    font-size: 1.3rem;
+  }
+}
+
+.exp__content__sub {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #b4bece;
+}
+
+@media (max-width: 900px) {
+  .exp__content__sub {
+    font-size: .9rem;
+  }
+}
+
+.exp0 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: -1.5rem;
+}
+
+.exp0__banner {
+  background-image: url(../media/brickviews.png);
+  transition: all 1000ms ease-in;
+  opacity: 0;
 }
 
 @keyframes pulse {
