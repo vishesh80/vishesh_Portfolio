@@ -379,8 +379,7 @@ a {
   display: flex;
   position: relative;
   align-items: center;
-  height: 90vh;
-  align-items: center;
+  min-height: 80vh;
   width: 90%;
   margin: auto;
   margin-bottom: 0rem;
@@ -444,6 +443,9 @@ a {
 }
 
 .about__banner {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 40%;
   height: 100%;
   background-image: url(../media/man-1x.png);
@@ -715,7 +717,8 @@ a {
   width: 90%;
   height: auto;
   margin: auto;
-  margin-bottom: 12rem;
+  margin-top: 2rem;
+  margin-bottom: 10rem;
 }
 
 @media (max-width: 600px) {
@@ -725,16 +728,25 @@ a {
 }
 
 .exp__banner {
-  width: 175px;
-  height: 175px;
+  width: 125px;
+  height: 125px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   color: transparent;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .exp__banner {
+    width: 100px;
+  }
 }
 
 .exp__content__heading {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1rem;
 }
@@ -746,7 +758,7 @@ a {
 }
 
 .exp__content__sub {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.4;
   font-weight: 400;
   color: #b4bece;
@@ -763,11 +775,24 @@ a {
   display: flex;
   align-items: center;
   justify-content: left;
-  margin-left: -1.5rem;
 }
 
 .exp0__banner {
   background-image: url(../media/brickviews.png);
+  transition: all 1000ms ease-in;
+  opacity: 0;
+}
+
+.exp1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 2rem;
+}
+
+.exp1__banner {
+  background-image: url(../media/Delo.png);
   transition: all 1000ms ease-in;
   opacity: 0;
 }

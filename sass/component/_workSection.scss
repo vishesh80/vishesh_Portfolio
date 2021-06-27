@@ -208,7 +208,8 @@
     width: 90%;
     height: auto;
     margin: auto;
-    margin-bottom: 12rem;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
 
     @include media(600)
     {
@@ -217,17 +218,20 @@
 
     &__banner
     {
-        width: 175px;
-        height: 175px;
+        width: 125px;
+        height: 125px;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         color: transparent;
+        overflow: hidden;
+        border-radius: 5px;
+        margin-right: 1.5rem;
 
-        // @include media(900)
-        // {
-        //     width: 50%;
-        // }
+        @include media(600)
+        {
+            width: 100px;
+        }
     }
 
     &__content
@@ -240,7 +244,7 @@
 
         &__heading
         {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 400;
             margin-bottom: 1rem;
             @include media(900)
@@ -250,7 +254,7 @@
         }
         &__sub
         {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.4;
             font-weight: 400;
             color: rgb(180, 190, 206);
@@ -267,7 +271,6 @@
         display: flex;
         align-items: center;
         justify-content: left;
-        margin-left: -1.5rem;
 
         // @include media(900)
         // {
@@ -278,6 +281,27 @@
     &0__banner
     {
         background-image: url(../media/brickviews.png);
+        transition: all 1000ms ease-in;
+        opacity: 0;
+    }
+
+    &1
+    {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        margin-top: 2rem;
+
+        // @include media(900)
+        // {
+        //     flex-direction: column;
+        // }
+    }
+
+    &1__banner
+    {
+        background-image: url(../media/Delo.png);
         transition: all 1000ms ease-in;
         opacity: 0;
     }

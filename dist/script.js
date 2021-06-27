@@ -7,6 +7,11 @@ const exp0s1 = document.getElementById('exp0s1');
 const exp0s2 = document.getElementById('exp0s2');
 const exp0__banner = document.getElementById('exp0__banner');
 
+const exp1h = document.getElementById("exp1h");
+const exp1s1 = document.getElementById('exp1s1');
+const exp1s2 = document.getElementById('exp1s2');
+const exp1__banner = document.getElementById('exp1__banner');
+
 const work = document.getElementById("work");
 
 const siteNeg1Name = document.getElementById('site-1Name');
@@ -48,6 +53,7 @@ let aboutFlag = true;
 let aboutPara1Flag = true;
 
 let expFlag0 = true;
+let expFlag1 = true;
 
 let workFlag = true;
 let siteNeg1NameFlag = true;
@@ -273,6 +279,14 @@ async function expAni(exp) {
     let exp0s1_tc = "Brickview Studios • Internship".split("");
     let exp0s2_tc = "Sept 2020 - Feb 2021 • 6 months".split("");
 
+    const date1 = new Date(), date2 = new Date('05/1/2021');
+    const diffTime = Math.abs(date2 - date1);
+    const months = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) / 30.5;
+
+    let exp1h_tc = "Associate Analyst (SAP)".split("");
+    let exp1s1_tc = "Deloitte • Full Time".split("");
+    let exp1s2_tc = `May 2021 - Present • ${months.toPrecision(2)} months`.split("");
+
     switch (exp) {
 
         case 0: {
@@ -296,7 +310,31 @@ async function expAni(exp) {
                 exp0s2.textContent = exp0s2.textContent + d;
                 await new Promise((resolve, reject) => setTimeout(() => resolve(), 35));
             }
+            break;
+        }
 
+        case 1: {
+            exp1__banner.classList.add('fadein');
+            exp1h.parentElement.append(dash);
+            for (let d of exp1h_tc) {
+                exp1h.textContent = exp1h.textContent + d;
+                await new Promise((resolve, reject) => setTimeout(() => resolve(), 35));
+            }
+            exp1h.parentElement.removeChild(dash);
+
+            exp1s1.parentElement.append(dash);
+            for (let d of exp1s1_tc) {
+                exp1s1.textContent = exp1s1.textContent + d;
+                await new Promise((resolve, reject) => setTimeout(() => resolve(), 35));
+            }
+            exp1s1.parentElement.removeChild(dash);
+
+            exp1s2.parentElement.append(dash);
+            for (let d of exp1s2_tc) {
+                exp1s2.textContent = exp1s2.textContent + d;
+                await new Promise((resolve, reject) => setTimeout(() => resolve(), 35));
+            }
+            break;
         }
 
     }
@@ -409,6 +447,12 @@ setTimeout(() => window.addEventListener("scroll", (e) => {
     if (innerHeight - innerHeight * 0.45 > rect2_1.top && expFlag0) {
         expFlag0 = false;
         expAni(0);
+    }
+
+    let rect2_2 = exp1__banner.getBoundingClientRect();
+    if (innerHeight - innerHeight * 0.45 > rect2_2.top && expFlag1) {
+        expFlag1 = false;
+        expAni(1);
     }
 
 
