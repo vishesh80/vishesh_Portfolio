@@ -160,6 +160,10 @@
         transform: translate(-50%,-50%);
         width: 80%;
         height: 80%;
+        
+        -moz-backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
 }
 
 /*--------------------Media queries-----------------------*/

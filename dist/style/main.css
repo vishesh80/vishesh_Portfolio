@@ -1016,6 +1016,7 @@ a {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
+  backface-visibility: hidden;
 }
 
 @supports (background-image: -moz-linear-gradient(45deg, #FFE600, #00FF88)) {
@@ -1044,6 +1045,7 @@ a {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
+  backface-visibility: hidden;
   left: 47%;
 }
 
@@ -1073,6 +1075,7 @@ a {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
+  backface-visibility: hidden;
 }
 
 .cards__card:hover .cards__card__front {
